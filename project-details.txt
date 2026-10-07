@@ -1,0 +1,31 @@
+Project Name *
+Life-Flow
+
+Project Description *
+Life-Flow is an interactive, high-performance blood donation platform engineered to bridge the critical gap between voluntary blood donors, hospitals, and patients in emergency need. Built with an immersive 3D anatomical vascular scroll animation, the platform provides real-time visibility into blood inventory levels across all major blood types (A+, A-, B+, B-, O+, O-, AB+, AB-). It enables prospective donors to easily schedule donation appointments or register as active lifesavers, while empowering families and medical teams to instantly locate compatible donors, discover nearby donation camps, and coordinate emergency blood requests with zero friction.
+
+What Problem Does It Solve? *
+In critical medical situations such as surgeries, trauma care, and severe illnesses, life-saving outcomes often depend entirely on rapid access to matching blood units. However, current blood donation systems suffer from fragmented communication, opaque and delayed inventory reporting, and low engagement due to static, outdated websites. During crises, patients' families are frequently left scrambling across social channels and phone calls trying to find available blood units.
+
+Life-Flow directly addresses this problem by delivering a unified, transparent, and engaging digital platform. It replaces static lists with real-time stock telemetry that clearly highlights critical blood shortages, incentivizing donors where they are needed most. By streamlining donor registration, simplifying camp discovery, and offering direct one-click emergency dispatch, Life-Flow eliminates bottlenecks and drastically reduces the response time needed to connect donors with patients when every second counts.
+
+Key Features *
+• 300-Frame Anatomical Scroll Animation — Smooth 60/120fps canvas frame-scrubbing with custom velocity damping and arterial light waves responding to user scroll.
+• Real-Time Blood Stock Telemetry — Live availability tracking and shortage alerts across all 8 blood types (A+, A-, B+, B-, O+, O-, AB+, AB-).
+• Dynamic Vascular Flow Overlay — Interactive SVG arterial connection paths mapping donor stations to emergency recipient nodes.
+• Rapid Emergency SOS & Booking Modals — One-click streamlined workflows for Scheduling Donations, Registering Donors, and Requesting Urgent Units.
+• Donation Camps & Centers Discovery — Interactive scheduling and discovery of nearby community blood drives and partner hospitals.
+• Modern Medical Dark-Mode Aesthetic — High-contrast, glassmorphic UI with responsive design for desktop and mobile devices.
+
+Technologies Used *
+React 19, TypeScript, Vite, Tailwind CSS v4, HTML5 Canvas API, Lucide React, Motion (Framer Motion), Node.js, Express, Vercel
+
+AI Tools Used (Transparent Disclosure) *
+Google AI Studio, Google Gemini (Gemini 2.5 / Gemini 3.8), Antigravity IDE
+
+AI Usage Description *
+AI tools were utilized across multiple stages of product development to accelerate engineering and elevate design fidelity:
+1. Architectural & UI Concept Design: AI was used to brainstorm the anatomical vascular theme, dark-mode glassmorphic aesthetics, and modular component hierarchy.
+2. Canvas Animation & Physics Optimization: AI assisted in drafting the mathematical lerp equations and RequestAnimationFrame (RAF) rendering loops for smooth 60fps/120fps frame-scrubbing.
+3. Component Implementation: AI helped rapidly scaffold interactive React components, modals (donation scheduling, donor search, camp discovery), and SVG flow connection paths.
+4. Deployment & Build Troubleshooting: AI assisted in resolving upstream npm peer dependency conflicts (Vite 8 and esbuild alignment) and tailoring the Vercel SPA routing deployment configuration.

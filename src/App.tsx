@@ -327,80 +327,103 @@ export default function App() {
       />
 
       {/* =========================================================================
-          SECTION 3: PLAIN BLACK EXPLORE SECTION
-          Appears seamlessly after the Blood Availability section
+          SECTION 3: IMPACT & PURPOSE WITH HANDFLOW ANIMATION VIDEO BACKGROUND
+          Seamless video playing in the background with text & glassmorphism overlay
           ========================================================================= */}
       <section
         id="explore-section"
-        className="relative z-10 w-full bg-[#060103] border-t border-white/10 py-20 px-4 sm:px-6 lg:px-8"
+        className="relative z-10 w-full overflow-hidden border-t border-white/10 py-24 px-4 sm:px-6 lg:px-8 bg-[#060103]"
       >
-        <div className="max-w-6xl mx-auto">
+        {/* Ambient Video Background Layer */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="w-full h-full object-cover opacity-35 scale-105 filter saturate-125 contrast-110"
+            src="/handflow.mp4"
+          />
+          {/* Multi-layered cinematic gradient overlays for seamless contrast & readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#060103] via-black/40 to-[#040002]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-red-950/20 via-transparent to-black/70" />
+        </div>
+
+        {/* Foreground Content with Crisp Text & Glassmorphic Cards */}
+        <div className="relative z-10 max-w-6xl mx-auto">
           {/* Section Heading */}
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-xs sm:text-sm font-semibold tracking-[0.2em] text-red-500 uppercase">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-[0.2em] text-red-400 bg-red-950/60 border border-red-500/30 uppercase backdrop-blur-md mb-3 shadow-[0_0_15px_rgba(239,68,68,0.25)]">
               IMPACT & PURPOSE
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-2">
+            <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight drop-shadow-md">
               Every Drop Counts
             </h2>
-            <p className="text-slate-400 mt-3 text-sm sm:text-base">
+            <p className="text-slate-300 mt-4 text-sm sm:text-base leading-relaxed drop-shadow">
               Learn how your contribution transforms lives across emergency care, oncology, and surgical recovery.
             </p>
           </div>
 
-          {/* 3-Column Impact Highlights */}
+          {/* 3-Column Impact Highlights with Frosted Glassmorphism */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-7 rounded-3xl bg-white/5 border border-white/10 hover:border-red-500/40 hover:bg-white/10 transition-all">
-              <div className="w-10 h-10 rounded-2xl bg-red-600/20 text-red-400 flex items-center justify-center font-bold text-sm mb-4">
+            <div className="group p-8 rounded-3xl bg-black/55 backdrop-blur-xl border border-white/15 hover:border-red-500/50 hover:bg-black/75 transition-all duration-300 shadow-2xl hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] hover:-translate-y-1">
+              <div className="w-11 h-11 rounded-2xl bg-red-600/25 border border-red-500/30 text-red-400 flex items-center justify-center font-bold text-sm mb-5 shadow-inner">
                 01
               </div>
-              <h3 className="text-lg font-bold text-white mb-2">Every 2 Seconds</h3>
+              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-red-400 transition-colors">
+                Every 2 Seconds
+              </h3>
               <p className="text-sm text-slate-300 leading-relaxed">
                 Someone in the world needs blood for accident trauma, cardiovascular surgeries, or organ transplants.
               </p>
             </div>
 
-            <div className="p-7 rounded-3xl bg-white/5 border border-white/10 hover:border-red-500/40 hover:bg-white/10 transition-all">
-              <div className="w-10 h-10 rounded-2xl bg-red-600/20 text-red-400 flex items-center justify-center font-bold text-sm mb-4">
+            <div className="group p-8 rounded-3xl bg-black/55 backdrop-blur-xl border border-white/15 hover:border-red-500/50 hover:bg-black/75 transition-all duration-300 shadow-2xl hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] hover:-translate-y-1">
+              <div className="w-11 h-11 rounded-2xl bg-red-600/25 border border-red-500/30 text-red-400 flex items-center justify-center font-bold text-sm mb-5 shadow-inner">
                 02
               </div>
-              <h3 className="text-lg font-bold text-white mb-2">1 Pint = 3 Lives</h3>
+              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-red-400 transition-colors">
+                1 Pint = 3 Lives
+              </h3>
               <p className="text-sm text-slate-300 leading-relaxed">
                 A single whole blood donation can be separated into red cells, platelets, and plasma to treat up to three distinct patients.
               </p>
             </div>
 
-            <div className="p-7 rounded-3xl bg-white/5 border border-white/10 hover:border-red-500/40 hover:bg-white/10 transition-all">
-              <div className="w-10 h-10 rounded-2xl bg-red-600/20 text-red-400 flex items-center justify-center font-bold text-sm mb-4">
+            <div className="group p-8 rounded-3xl bg-black/55 backdrop-blur-xl border border-white/15 hover:border-red-500/50 hover:bg-black/75 transition-all duration-300 shadow-2xl hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] hover:-translate-y-1">
+              <div className="w-11 h-11 rounded-2xl bg-red-600/25 border border-red-500/30 text-red-400 flex items-center justify-center font-bold text-sm mb-5 shadow-inner">
                 03
               </div>
-              <h3 className="text-lg font-bold text-white mb-2">10-Minute Process</h3>
+              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-red-400 transition-colors">
+                10-Minute Process
+              </h3>
               <p className="text-sm text-slate-300 leading-relaxed">
                 The actual blood draw takes only 8–10 minutes. Your body naturally replenishes fluids within 24 hours.
               </p>
             </div>
           </div>
 
-          {/* Quick Schedule Banner */}
-          <div className="mt-14 p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-red-950/40 via-black to-slate-950 border border-white/10 text-white flex flex-col sm:flex-row items-center justify-between gap-6">
+          {/* Quick Schedule Banner with Glassmorphic Gradient */}
+          <div className="mt-14 p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-red-950/70 via-black/80 to-slate-950/80 backdrop-blur-xl border border-white/15 text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xl">
             <div>
               <h3 className="text-xl sm:text-2xl font-bold tracking-tight">
                 Ready to be someone's hero?
               </h3>
-              <p className="text-slate-400 text-sm mt-1 max-w-lg">
+              <p className="text-slate-300 text-sm mt-1 max-w-lg">
                 Join our volunteer network or book a 15-minute donation slot at a local mobile camp or partner hospital.
               </p>
             </div>
             <div className="flex items-center gap-3 shrink-0">
               <button
                 onClick={() => setBeDonorOpen(true)}
-                className="px-5 py-2.5 rounded-full text-sm font-medium border border-white/20 hover:border-white/50 text-slate-200 hover:bg-white/10 transition-colors"
+                className="px-5 py-2.5 rounded-full text-sm font-medium border border-white/20 hover:border-white/50 text-slate-200 hover:bg-white/10 transition-colors cursor-pointer"
               >
                 Register as Donor
               </button>
               <button
                 onClick={() => setDonateOpen(true)}
-                className="px-6 py-2.5 rounded-full text-sm font-medium bg-red-600 hover:bg-red-700 text-white shadow-sm transition-all flex items-center gap-2"
+                className="px-6 py-2.5 rounded-full text-sm font-medium bg-red-600 hover:bg-red-700 text-white shadow-lg shadow-red-600/30 transition-all flex items-center gap-2 cursor-pointer"
               >
                 <span>Book Appointment</span>
                 <ArrowRight className="w-4 h-4" />
