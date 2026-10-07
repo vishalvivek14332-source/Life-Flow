@@ -1,0 +1,6 @@
+{
+  "name": "LifeFlow - Blood Donation Platform",
+  "description": "A minimalist blood donation platform connecting donors with patients in need. Give blood, save lives.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

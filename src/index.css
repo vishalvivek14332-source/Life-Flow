@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+:root {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure inputs, selects, options and textareas in light surfaces have crisp dark text */
+input, select, textarea {
+  color: #0f172a !important;
+}
+
+select option {
+  color: #0f172a !important;
+  background-color: #ffffff !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #64748b !important;
+}
+
+/* Modal text color enforcement */
+.modal-container {
+  color: #0f172a !important;
+}
+
+/* Cardiac lub-dub anatomical heartbeat pulse */
+@keyframes cardiacBeat {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(220, 38, 38, 0.4), 0 0 35px rgba(239, 68, 68, 0.2);
+  }
+  14% {
+    transform: scale(1.09);
+    box-shadow: 0 0 35px rgba(239, 68, 68, 0.8), 0 0 60px rgba(239, 68, 68, 0.4);
+  }
+  28% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(220, 38, 38, 0.4), 0 0 35px rgba(239, 68, 68, 0.2);
+  }
+  42% {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(239, 68, 68, 0.65), 0 0 45px rgba(239, 68, 68, 0.3);
+  }
+  60% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(220, 38, 38, 0.4), 0 0 35px rgba(239, 68, 68, 0.2);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(220, 38, 38, 0.4), 0 0 35px rgba(239, 68, 68, 0.2);
+  }
+}
+
+.animate-cardiac-beat {
+  animation: cardiacBeat 1.25s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+}
+
+/* Subtle concentric light wave ripple during scrolling */
+@keyframes arterialWave {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.75;
+  }
+  60% {
+    transform: scale(1.55);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.animate-arterial-wave {
+  animation: arterialWave 2.2s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+}
+
+.animate-arterial-wave-delayed {
+  animation: arterialWave 2.2s cubic-bezier(0.1, 0.8, 0.3, 1) 1.1s infinite;
+}
+
+/* Shimmer pulse for liquid blood-level indicators */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
