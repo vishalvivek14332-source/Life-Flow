@@ -127,7 +127,7 @@ The output will be placed in the `dist/` directory, ready to be served by any st
 LifeFlow is pre-configured with [`vercel.json`](vercel.json) for instantaneous deployment:
 1. Import `Life-Flow` directly into [Vercel](https://vercel.com/new).
 2. The framework preset will automatically detect **Vite**.
-3. Deploy! Every commit pushed to `main` will automatically trigger a fresh production build.
+3. Every commit pushed to `main` will automatically trigger a fresh production build.
 
 ---
 
