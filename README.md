@@ -87,7 +87,7 @@ lifeflow---blood-donation-platform/
 ## 🚀 Getting Started Locally
 
 ### Prerequisites
-- [Node.js](https://nodejs.org/) (v18.0.0 or higher recommended)
+- [Node.js](https://nodejs.org/) (v18.0.0)
 - `npm` (bundled with Node.js)
 
 ### Installation
